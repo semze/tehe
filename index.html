@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror Game Hub</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #enter-btn {
+            background: none;
+            color: white;
+            border: 2px solid white;
+            padding: 15px 30px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #enter-btn:hover {
+            background: white;
+            color: black;
+        }
+        #game-menu {
+            display: none;
+            margin-top: 20px;
+        }
+        .game-link {
+            display: block;
+            margin: 10px 0;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+        }
+        .game-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>WELCOME TO THE HORROR DIMENSION</h1>
+    <button id="enter-btn">ENTER</button>
+    <div id="game-menu">
+        <h2>Choose a Game</h2>
+        <a href="game1.html" class="game1.html">The Forgotten Asylum</a>
+        <a href="game2.html" class="game-link">Whispers in the Dark</a>
+        <a href="game3.html" class="game-link">Echoes of the Damned</a>
+        <a href="game4.html" class="game-link">The Shadow's Grasp</a>
+        <a href="game5.html" class="game-link">Nightmare Descent</a>
+    </div>
+
+    <script>
+        document.getElementById("enter-btn").addEventListener("click", function() {
+            document.getElementById("game-menu").style.display = "block";
+            this.style.display = "none";
+        });
+    </script>
+</body>
+</html>
