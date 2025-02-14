@@ -88,7 +88,7 @@
     <div id="victory">YOU ESCAPED THE ASYLUM!</div>
 
     <!-- Progress Text -->
-    <div id="progress-text" class="progress-text">Question 1/5</div>
+    <div id="progress-text" class="progress-text">Question 1/35</div>
 
     <!-- Volume Controls -->
     <div class="volume-controls">
@@ -112,7 +112,7 @@
         const progressText = document.getElementById("progress-text");
 
         let storyProgress = 0;
-        const totalQuestions = 5;
+        const totalQuestions = 35;
 
         // Audio Elements
         const clickSound = document.getElementById("click-sound");
@@ -204,6 +204,15 @@
                         victory();
                     } else if (choice === 2) {
                         textBox.innerHTML = "You ignore the sound, but the building starts to shake violently. The walls begin to crack!";
+                        gameOver();
+                    }
+                    break;
+                case 34:
+                    if (choice === 1) {
+                        textBox.innerHTML = "You manage to feed the creature your hand, and it devours it, allowing you to escape.";
+                        victory();
+                    } else if (choice === 2) {
+                        textBox.innerHTML = "The creature attacks and you are overwhelmed by its strength.";
                         gameOver();
                     }
                     break;
